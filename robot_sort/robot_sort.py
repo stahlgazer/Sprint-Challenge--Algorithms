@@ -97,7 +97,30 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # grab first item, if it's the only item then return
+        if self.can_move_right() == False:
+            return
+        else: self.swap_item()
+        
+        # move to end of list
+        while self.can_move_right() == True:
+            self.move_right()
+
+        # iterate through and swap if the held value is bigger, otherwise move left and try again
+        while self.compare_item() is not None:
+            if self.compare_item() == 1:
+                self.swap_item()
+            else:
+                self.move_left()
+        # once Robot reaches start of the list we need to replace None value that we originally started with
+        # call the sort function to start the process over again on next position
+        else: 
+            self.swap_item()
+            self.move_right()
+            self.sort()
+        
+        
+        
 
 
 if __name__ == "__main__":
