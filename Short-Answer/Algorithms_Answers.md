@@ -13,4 +13,4 @@ c) O(n) or something simliar because the size of input directly affects how many
 ## Exercise II
 
 I would probably use binary search to reduce the amount of guesses needed.
-First find the middle floor of n, check if egg breaks or not, if it does then remove top half and keep moving lower, otherwise remove lower half and move up. Would be O(log n) since it's linear but halving with each calculation.
+First find the middle floor of n, check if egg breaks or not, if it doesn't then remove bottom half and keep moving higher with the new middle. If egg breaks, remove top half and go lower, since we need to find the floor it breaks on. Would be O(log n) since it's linear but halving with each calculation.
