@@ -5,7 +5,7 @@
 a) O(n) because calculations are based directly with the size of n.
 
 
-b) O(n log n) or something similar because while operations increase with n, j is multiplied by 2 which decreases the amount of calculations needed in half for the 2nd loop.
+b) O(n log n) or something similar because while operations increase with n and there is a nested loop, j is multiplied by 2 which decreases the amount of calculations needed in half for the 2nd loop.
 
 
 c) O(n) or something simliar because the size of input directly affects how many recursions take place.
